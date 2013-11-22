@@ -208,12 +208,6 @@ git pull origin master
 
     vendor/                   --> The vendor directory is can be used for 3rd Party libraries.
                                   Any files located in this directory will be included in js/vendor.js
-  bower.json                  --> Bower component config
-  config.coffee               --> Brunch config
-  package.json                --> node modules config
-
-## Contributers
-
-[Complete list of code contributers](https://github.com/scotch/angular-brunch-seed/graphs/contributors)
-
-For more information on angular please check out <http://angularjs.org>
+    bower.json                  --> Bower component config
+    config.coffee               --> Brunch config
+    package.json                --> node modules config
