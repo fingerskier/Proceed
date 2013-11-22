@@ -1,48 +1,35 @@
-# angular-brunch-seed
-### A starter project for AngularJS using Brunch.io
+# Proceed
+### A skeleton Brunch.io project for building AngularJS apps based on angular-brunch-seed.
+### Big uber-thanks to Scotch/Kyle Finley for authoring that!
 
-[AngularJS](http://angularjs.org) + [Brunch](http://brunch.io)
+[AngularJS](http://angularjs.org)
+[Brunch](http://brunch.io)
+[Karma](https://github.com/karma-runner/karma)
+[Coffeescript](http://http://coffeescript.org)
+[Jade](http://http://jade-lang.com)
+[Stylus](http://http://learnboost.github.io/stylus)
 
-#### ** MAJOR UPDATES **
-v0.4.0 Bring with it some major changes. If you're upgrading from a previous release, 
-please run `./scripts/init.sh` and remove any bower components from `vendor`. Bower
-now uses the `bower_components` directory.
+#### ** Info **
+This project is a fork of angular-brunch-seed.  It contains many extras that I use...not to mention a different
+application format...that may be extraneous to your needs.
 
-Features:
-* Coffeescript / Jade / Less / Stylus automatically compiled on save
-* auto-reload during development saves you from manually refreshing the page
-* Javascript / CSS minification for production
-* [karma](https://github.com/karma-runner/karma) integration for
-  unit tests
-* Bootstrap integration with themes.
+Brunch Supports:
+* Coffeescript
+* Jade
+* Stylus (and Less)
+
+Brunch Niceties:
+* brunch watch --server ... runs a localhost instance, auto-tests, auto-reloads the page, and transpiles assets
+* brunch build --production ... minifies all source into 3 files
 * Source map support
 
-## Alternate Versions
+## How to Use
+* `npm install -g brunch`
+* `brunch new https://github.com/fingerskier/Proceed.git`
+* `cd Proceed`
+* develop
 
-- [Livescript](https://github.com/clkao/angular-brunch-seed-livescript) 
-  by [@clkao](https://github.com/clkao) - Uses [Livescript](http://livescript.net/) 
-  instead of [Coffeescript](http://coffeescript.org/)
-- [True North](https://github.com/scoarescoare/angular-brunch-true-north) 
-  by [@scoarescoare](https://github.com/scoarescoare) - Uses [SASS](http://sass-lang.com/) 
-  instead of [LESS](http://lesscss.org/)
-- [brunch-on-asteroids](https://github.com/exlee/brunch-on-asteroids) 
-  by [@exlee](https://github.com/exlee) - A minimalistic version that adds Generators,
-  Bootswatch themes, D3, and more.
-- [angular-brunch-seed-modularized](https://github.com/sanfordredlich/angular-brunch-seed-modularized) 
-  by [@sanfordredlich](https://github.com/sanfordredlich) - Demonstrates a modular
-  design, consistent with best practices and better suited for larger projects
-
-## How to use angular-brunch-seed
-
-* `git clone https://github.com/scotch/angular-brunch-seed.git` to clone 
-  the **angular-brunch-seed** repository
-* `cd angular-brunch-seed`
-* `./scripts/init.sh` to install node packages
-
-Or if you have **Brunch** installed run:
-
-`brunch new myapp --skeleton https://github.com/scotch/angular-brunch-seed`
-
+TODO: remove? not sure this step is necessary
 You must also install packages using bower. Either
 
 ```
@@ -59,14 +46,8 @@ slow, because it downloads the complete git history. If you think that there
 might be a problems, check you network traffic. If the build is still
 downloading then it's still working.
 
-### Using Jade
 
-You will find the jade files in the `app` and `app/partials` directories.
-Upon save the Jade files will be recompiled to HTML and added to the
-`$templateCache`. When reverencing a partial use the path should begin with
-`partial/` and end with `.html`. For example the `app/partials/nav.jade` would
-be referenced in the Angular javascript code as 'partials/nav.html'.
-
+TODO: remove this...
 *NOTE:* Behind the scenes Angular-brunch-seed uses 
 [jade-angular-brunch](https://github.com/GulinSS/jade-angularjs-brunch)
 to compile and serve partials.
@@ -78,6 +59,7 @@ file in your `index.html` file.
 
 If you are interested in the compiled HTML view the contents 
 of the `_public/js/partials.js` file.
+
 
 ### Using html
 
@@ -91,6 +73,7 @@ All Jade file will be compiled to HTML and be placed in the `app/assets` directo
 Additionally, the `*.jade` files will be removed from the project. Any changes
 that you make to the `app/assets/**/*.html` files will now appear in the browser.
 
+
 ### Running the app during development
 
 * `./scripts/server.sh` to serve using **Brunch**
@@ -102,6 +85,7 @@ load. If this occurs, refresh the page. Subsequent refresh will render
 correctly. Also, the initial load will take longer then subsequent loads,
 some where around 20 seconds is normal.
 
+
 ### Running the app in production
 
 * `./scripts/production.sh` to minify javascript and css files.
@@ -110,11 +94,13 @@ Please be aware of the caveats regarding Angular JS and minification,
 take a look at [Dependency Injection](http://docs.angularjs.org/guide/di)
 for information.
 
+
 ### Using Bower
 
 Angular-brunch-seed uses [Bower](http://twitter.github.com/bower/) for package
 management. To add or update dependencies, modify the `component.json` file
 and run `bower install`. The component will be added to the `vendor` directory.
+
 
 ### Running unit tests
 
@@ -127,11 +113,13 @@ Notes:
 - Set the browsers that you would like to target in the `/test/karma.conf.js` file
   E.g. `browser = ["ChromeCanary", "Firefox"]`
 
+
 ### End to end testing
 
 * run the app in development mode as described above using a separate terminal
 * `./scripts/test-e2e.sh` to run e2e tests with
   [karma](https://github.com/karma-runner/karma) using Angular's scenario runner
+
 
 ### Common issues
 
@@ -146,10 +134,8 @@ Initial load does not render correctly; scripts are not loading.
 
 The complete [Brunch FAQ](https://github.com/brunch/brunch/blob/master/docs/faq.rst)
 
-### Receiving updates from upstream
 
-When we upgrade Angular-brunch-seed's repo with newer angular or testing library code,
-you can just fetch the changes and merge them into your project with git.
+### Receiving updates from upstream
 
 ```bash
 git pull origin master
